@@ -116,7 +116,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("GLOBEMED HEALTHCARE");
         jPanel10.add(jLabel5);
-        jLabel5.getAccessibleContext().setAccessibleName("GLOBEMED HEALTHCARE");
 
         jPanel1.add(jPanel10);
 
@@ -165,6 +164,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/patients_icon.png"))); // NOI18N
         jButton2.setText("   Patients");
         jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
@@ -187,6 +191,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton3.setText(" Payment");
         jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton3.setIconTextGap(3);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton3);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
@@ -195,6 +204,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/report_icon.png"))); // NOI18N
         jButton4.setText("  Reports");
         jButton4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton4);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
@@ -407,6 +421,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/report_icon.png"))); // NOI18N
         jButton10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
         jPanel17.add(jButton10);
 
         jPanel16.add(jPanel17, java.awt.BorderLayout.CENTER);
@@ -748,6 +767,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        Appointments appointments = new Appointments();
+        appointments.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -759,11 +781,46 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        StaffManagement staffManagement = new StaffManagement();
+        staffManagement.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        Patients patients = new Patients();
+        patients.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Patients patients = new Patients();
+        patients.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        Reports reports = new Reports();
+        reports.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        BillingManagement billingManagement = new BillingManagement();
+        billingManagement.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        Reports reports = new Reports();
+        reports.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments
